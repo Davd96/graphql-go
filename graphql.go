@@ -21,7 +21,7 @@ import (
 // ParseSchema parses a GraphQL schema and attaches the given root resolver. It returns an error if
 // the Go type signature of the resolvers does not match the schema. If nil is passed as the
 // resolver, then the schema can not be executed, but it may be inspected (e.g. with ToJSON).
-func ParseSchema(schemaString string, resolver interface{}, opts ...SchemaOpt) (*Schema, error) {
+func ParseSchema(schemaString string, resolverQuery interface{}, resolverMutation interface{}, opts ...SchemaOpt) (*Schema, error) {
 	s := &Schema{
 		schema:           schema.New(),
 		maxParallelism:   10,
@@ -29,6 +29,7 @@ func ParseSchema(schemaString string, resolver interface{}, opts ...SchemaOpt) (
 		validationTracer: trace.NoopValidationTracer{},
 		logger:           &log.DefaultLogger{},
 	}
+
 	for _, opt := range opts {
 		opt(s)
 	}
@@ -37,20 +38,22 @@ func ParseSchema(schemaString string, resolver interface{}, opts ...SchemaOpt) (
 		return nil, err
 	}
 
-	if resolver != nil {
-		r, err := resolvable.ApplyResolver(s.schema, resolver)
-		if err != nil {
-			return nil, err
-		}
-		s.res = r
+	var resolver resolvable.Resolvers
+	resolver.QueryResolver = resolverQuery
+	resolver.MutationResolver = resolverMutation
+
+	r, err := resolvable.ApplyResolver(s.schema, resolver)
+	if err != nil {
+		return nil, err
 	}
+	s.res = r
 
 	return s, nil
 }
 
 // MustParseSchema calls ParseSchema and panics on error.
 func MustParseSchema(schemaString string, resolver interface{}, opts ...SchemaOpt) *Schema {
-	s, err := ParseSchema(schemaString, resolver, opts...)
+	s, err := ParseSchema(schemaString, resolver, resolver, opts...)
 	if err != nil {
 		panic(err)
 	}
