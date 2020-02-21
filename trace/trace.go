@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/guzmanweb/graphql-go/errors"
-	"github.com/guzmanweb/graphql-go/introspection"
+	"github.com/Davd96/graphql-go/errors"
+	"github.com/Davd96/graphql-go/introspection"
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
 	"github.com/opentracing/opentracing-go/log"

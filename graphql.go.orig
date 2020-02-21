@@ -5,17 +5,17 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/guzmanweb/graphql-go/errors"
-	"github.com/guzmanweb/graphql-go/internal/common"
-	"github.com/guzmanweb/graphql-go/internal/exec"
-	"github.com/guzmanweb/graphql-go/internal/exec/resolvable"
-	"github.com/guzmanweb/graphql-go/internal/exec/selected"
-	"github.com/guzmanweb/graphql-go/internal/query"
-	"github.com/guzmanweb/graphql-go/internal/schema"
-	"github.com/guzmanweb/graphql-go/internal/validation"
-	"github.com/guzmanweb/graphql-go/introspection"
-	"github.com/guzmanweb/graphql-go/log"
-	"github.com/guzmanweb/graphql-go/trace"
+	"github.com/Davd96/graphql-go/errors"
+	"github.com/Davd96/graphql-go/internal/common"
+	"github.com/Davd96/graphql-go/internal/exec"
+	"github.com/Davd96/graphql-go/internal/exec/resolvable"
+	"github.com/Davd96/graphql-go/internal/exec/selected"
+	"github.com/Davd96/graphql-go/internal/query"
+	"github.com/Davd96/graphql-go/internal/schema"
+	"github.com/Davd96/graphql-go/internal/validation"
+	"github.com/Davd96/graphql-go/introspection"
+	"github.com/Davd96/graphql-go/log"
+	"github.com/Davd96/graphql-go/trace"
 )
 
 // ParseSchema parses a GraphQL schema and attaches the given root resolver. It returns an error if

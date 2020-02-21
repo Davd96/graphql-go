@@ -1,4 +1,4 @@
-module github.com/guzmanweb/graphql-go
+module github.com/Davd96/graphql-go
 
 require (
 	github.com/opentracing/opentracing-go v1.0.2

@@ -8,14 +8,14 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/guzmanweb/graphql-go/errors"
-	"github.com/guzmanweb/graphql-go/internal/common"
-	"github.com/guzmanweb/graphql-go/internal/exec/resolvable"
-	"github.com/guzmanweb/graphql-go/internal/exec/selected"
-	"github.com/guzmanweb/graphql-go/internal/query"
-	"github.com/guzmanweb/graphql-go/internal/schema"
-	"github.com/guzmanweb/graphql-go/log"
-	"github.com/guzmanweb/graphql-go/trace"
+	"github.com/Davd96/graphql-go/errors"
+	"github.com/Davd96/graphql-go/internal/common"
+	"github.com/Davd96/graphql-go/internal/exec/resolvable"
+	"github.com/Davd96/graphql-go/internal/exec/selected"
+	"github.com/Davd96/graphql-go/internal/query"
+	"github.com/Davd96/graphql-go/internal/schema"
+	"github.com/Davd96/graphql-go/log"
+	"github.com/Davd96/graphql-go/trace"
 )
 
 type Request struct {

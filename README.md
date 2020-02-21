@@ -1,4 +1,4 @@
-# graphql-go [![Sourcegraph](https://sourcegraph.com/github.com/guzmanweb/graphql-go/-/badge.svg)](https://sourcegraph.com/github.com/guzmanweb/graphql-go?badge) [![Build Status](https://semaphoreci.com/api/v1/guzmanweb/graphql-go/branches/master/badge.svg)](https://semaphoreci.com/guzmanweb/graphql-go) [![GoDoc](https://godoc.org/github.com/guzmanweb/graphql-go?status.svg)](https://godoc.org/github.com/guzmanweb/graphql-go)
+# graphql-go [![Sourcegraph](https://sourcegraph.com/github.com/Davd96/graphql-go/-/badge.svg)](https://sourcegraph.com/github.com/Davd96/graphql-go?badge) [![Build Status](https://semaphoreci.com/api/v1/Davd96/graphql-go/branches/master/badge.svg)](https://semaphoreci.com/Davd96/graphql-go) [![GoDoc](https://godoc.org/github.com/Davd96/graphql-go?status.svg)](https://godoc.org/github.com/Davd96/graphql-go)
 
 <p align="center"><img src="docs/img/logo.png" width="300"></p>
 
@@ -17,11 +17,11 @@ safe for production use.
 - handles panics in resolvers
 - parallel execution of resolvers
 - subscriptions
-   - [sample WS transport](https://github.com/guzmanweb/graphql-transport-ws)
+   - [sample WS transport](https://github.com/Davd96/graphql-transport-ws)
 
 ## Roadmap
 
-We're trying out the GitHub Project feature to manage `graphql-go`'s [development roadmap](https://github.com/guzmanweb/graphql-go/projects/1).
+We're trying out the GitHub Project feature to manage `graphql-go`'s [development roadmap](https://github.com/Davd96/graphql-go/projects/1).
 Feedback is welcome and appreciated.
 
 ## (Some) Documentation
@@ -35,8 +35,8 @@ import (
         "log"
         "net/http"
 
-        graphql "github.com/guzmanweb/graphql-go"
-        "github.com/guzmanweb/graphql-go/relay"
+        graphql "github.com/Davd96/graphql-go"
+        "github.com/Davd96/graphql-go/relay"
 )
 
 type query struct{}

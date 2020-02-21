@@ -5,7 +5,7 @@ import (
 	"strings"
 	"text/scanner"
 
-	"github.com/guzmanweb/graphql-go/errors"
+	"github.com/Davd96/graphql-go/errors"
 )
 
 type Literal interface {

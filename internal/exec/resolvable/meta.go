@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/guzmanweb/graphql-go/internal/common"
-	"github.com/guzmanweb/graphql-go/internal/schema"
-	"github.com/guzmanweb/graphql-go/introspection"
+	"github.com/Davd96/graphql-go/internal/common"
+	"github.com/Davd96/graphql-go/internal/schema"
+	"github.com/Davd96/graphql-go/introspection"
 )
 
 var MetaSchema *Object

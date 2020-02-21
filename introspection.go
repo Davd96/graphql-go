@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/guzmanweb/graphql-go/internal/exec/resolvable"
-	"github.com/guzmanweb/graphql-go/introspection"
+	"github.com/Davd96/graphql-go/internal/exec/resolvable"
+	"github.com/Davd96/graphql-go/introspection"
 )
 
 // Inspect allows inspection of the given schema.
